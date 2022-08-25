@@ -14,5 +14,6 @@ locals {
     github           = lower(var.vcs_provider) == "github" ? aws_codestarconnections_connection.github[0].arn : ""
     githubenterprise = lower(var.vcs_provider) == "githubenterprise" ? aws_codestarconnections_connection.githubenterprise[0].arn : ""
     codecommit       = "null"
+    s3               = "null"
   }
 }
