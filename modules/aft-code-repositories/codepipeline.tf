@@ -554,5 +554,5 @@ resource "aws_cloudwatch_event_target" "s3_account_provisioning_customizations" 
   target_id = "codepipeline"
   rule      = aws_cloudwatch_event_rule.s3_account_provisioning_customizations[0].name
   arn       = aws_codepipeline.s3_account_provisioning_customizations[0].arn
-  role_arn  = aws_iam_role.cloudwatch_events_codepipeline_role[0].arn
+  role_arn  = aws_iam_role.s3_cloudwatch_events_codepipeline_role[0].arn
 }
