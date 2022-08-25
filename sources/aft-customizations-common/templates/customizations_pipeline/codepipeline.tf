@@ -108,7 +108,7 @@ resource "aws_codepipeline" "aft_codecommit_customizations_codepipeline" {
 }
 
 resource "aws_codepipeline" "aft_codestar_customizations_codepipeline" {
-  count    = local.vcs.is_codecommit ? 0 : 1
+  count    = "${signum(local.vcs.is_codecommit + local.vs.is_s3)}" ? 0 : 1
   name     = "${var.account_id}-customizations-pipeline"
   role_arn = data.aws_iam_role.aft_codepipeline_customizations_role.arn
 
