@@ -181,7 +181,7 @@ resource "aws_cloudwatch_event_rule" "s3_account_request" {
     "aws.s3"
   ],
   "detail-type": [
-    "S3 repo change"
+    "AWS API Call via CloudTrail"
   ],
   "detail": {
     "eventSource": [
@@ -525,7 +525,7 @@ resource "aws_cloudwatch_event_rule" "s3_account_provisioning_customizations" {
     "aws.s3"
   ],
   "detail-type": [
-    "S3 repo change"
+    "AWS API Call via CloudTrail"
   ],
   "detail": {
     "eventSource": [
