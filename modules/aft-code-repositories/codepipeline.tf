@@ -141,7 +141,7 @@ resource "aws_codepipeline" "s3_account_request" {
 
       configuration = {
         S3Bucket             = "aws-aft"
-        S3ObjectKey          = "aft-account-request"
+        S3ObjectKey          = "aft-account-request.zip"
         PollForSourceChanges = false
       }
     }
@@ -485,7 +485,7 @@ resource "aws_codepipeline" "s3_account_provisioning_customizations" {
 
       configuration = {
         S3Bucket             = "aws-aft"
-        S3ObjectKey          = "account-provisioning-customizations"
+        S3ObjectKey          = "account-provisioning-customizations.zip"
         PollForSourceChanges = false
       }
     }

@@ -251,7 +251,7 @@ resource "aws_codepipeline" "aft_s3_customizations_codepipeline" {
 
       configuration = {
         S3Bucket             = "aws-aft"
-        S3ObjectKey          = "aft-global-customizations"
+        S3ObjectKey          = "aft-global-customizations.zip"
         PollForSourceChanges = false
       }
     }
@@ -266,7 +266,7 @@ resource "aws_codepipeline" "aft_s3_customizations_codepipeline" {
 
       configuration = {
         S3Bucket             = "aws-aft"
-        S3ObjectKey          = "aft-account-customizations"
+        S3ObjectKey          = "aft-account-customizations.zip"
         PollForSourceChanges = false
       }
     }
