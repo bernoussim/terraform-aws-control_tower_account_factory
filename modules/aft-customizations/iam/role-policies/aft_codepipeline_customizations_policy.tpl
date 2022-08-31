@@ -11,8 +11,8 @@
       "Resource": [
         "${aws_s3_bucket_aft_codepipeline_customizations_bucket_arn}",
         "${aws_s3_bucket_aft_codepipeline_customizations_bucket_arn}/*",
-        "arn:aws:s3:::aws-aft",
-        "arn:aws:s3:::aws-aft/*"
+        "arn:aws:s3:::${aft_s3_bucket_name}",
+        "arn:aws:s3:::${aft_s3_bucket_name}/*"
       ]
     },
     {
