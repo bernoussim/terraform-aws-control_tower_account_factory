@@ -59,9 +59,9 @@ data "aws_ssm_parameter" "global_customizations_s3_object_name" {
 }
 
 data "aws_ssm_parameter" "account_customizations_s3_object_name" {
-  name = "/aft/config//aft/config/account-customizations-s3-object-name"
+  name = "/aft/config/account-customizations-s3-object-name"
 }
 
 data "aws_ssm_parameter" "account_provisioning_customizations_s3_object_name" {
-  name = "/aft/config//aft/config/account-provisioning-customizations-s3-object_name"
+  name = "/aft/config/account-provisioning-customizations-s3-object_name"
 }
