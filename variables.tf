@@ -244,6 +244,56 @@ variable "account_provisioning_customizations_repo_branch" {
   }
 }
 
+variable "aft_s3_bucket_name" {
+  description = "Bucket to store AFT repos in the engineering environment"
+  type        = string
+  default     = "rbc-aws-aft"
+  validation {
+    condition     = length(var.aft_s3_bucket_name) > 0
+    error_message = "Variable var: aft_bucket_name cannot be empty."
+  }
+}
+
+variable "account_request_s3_object_name" {
+  description = "S3 object that store account request repo"
+  type        = string
+  default     = "aft-account-request"
+  validation {
+    condition     = length(var.account_request_s3_object_name) > 0
+    error_message = "Variable var: account_request_s3_object_name cannot be empty."
+  }
+}
+
+variable "global_customizations_s3_object_name" {
+  description = "S3 object that store global customization repo"
+  type        = string
+  default     = "aft-global-customizations"
+  validation {
+    condition     = length(var.global_customizations_s3_object_name) > 0
+    error_message = "Variable var: global_customizations_s3_object_name cannot be empty."
+  }
+}
+
+variable "account_customizations_s3_object_name" {
+  description = "S3 object that store account customization repo"
+  type        = string
+  default     = "aft-account-customizations"
+  validation {
+    condition     = length(var.account_customizations_s3_object_name) > 0
+    error_message = "Variable var: account_customizations_s3_object_name cannot be empty."
+  }
+}
+
+variable "account_provisioning_customizations_s3_object_name" {
+  description = "S3 object that stores account provisioning customizations repo"
+  type        = string
+  default     = "aft-account-provisioning-customizations"
+  validation {
+    condition     = length(var.account_provisioning_customizations_s3_object_name) > 0
+    error_message = "Variable var: account_provisioning_customizations_s3_object_name cannot be empty."
+  }
+}
+
 #########################################
 # AFT Terraform Distribution Variables
 #########################################

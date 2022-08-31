@@ -92,3 +92,23 @@ variable "account_provisioning_customizations_repo_branch" {
 variable "global_codebuild_timeout" {
   type = number
 }
+
+variable "aft_s3_bucket_name" {
+  type = string
+}
+
+variable "account_request_s3_object_name" {
+  type = string
+}
+
+variable "global_customizations_s3_object_name" {
+  type = string
+}
+
+variable "account_customizations_s3_object_name" {
+  type = string
+}
+
+variable "account_provisioning_customizations_s3_object_name" {
+  type = string
+}

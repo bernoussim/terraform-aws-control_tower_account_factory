@@ -253,3 +253,23 @@ variable "aft_version" {
 variable "aft_metrics_reporting" {
   type = string
 }
+
+variable "aft_s3_bucket_name" {
+  type = string
+}
+
+variable "account_request_s3_object_name" {
+  type = string
+}
+
+variable "global_customizations_s3_object_name" {
+  type = string
+}
+
+variable "account_customizations_s3_object_name" {
+  type = string
+}
+
+variable "account_provisioning_customizations_s3_object_name" {
+  type = string
+}

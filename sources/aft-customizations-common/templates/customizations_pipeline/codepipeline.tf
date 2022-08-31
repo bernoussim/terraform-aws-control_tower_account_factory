@@ -250,8 +250,8 @@ resource "aws_codepipeline" "aft_s3_customizations_codepipeline" {
       output_artifacts = ["source-aft-global-customizations"]
 
       configuration = {
-        S3Bucket             = "aws-aft"
-        S3ObjectKey          = "aft-global-customizations.zip"
+        S3Bucket             = data.aws_ssm_parameter.aft_s3_bucket_name.value
+        S3ObjectKey          = "${data.aws_ssm_parameter.global_customizations_s3_object_name.value}.zip"
         PollForSourceChanges = false
       }
     }
@@ -265,8 +265,8 @@ resource "aws_codepipeline" "aft_s3_customizations_codepipeline" {
       output_artifacts = ["source-aft-account-customizations"]
 
       configuration = {
-        S3Bucket             = "aws-aft"
-        S3ObjectKey          = "aft-account-customizations.zip"
+        S3Bucket             = data.aws_ssm_parameter.aft_s3_bucket_name.value
+        S3ObjectKey          = "${data.aws_ssm_parameter.account_customizations_s3_object_name.value}.zip"
         PollForSourceChanges = false
       }
     }
