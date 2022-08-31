@@ -32,7 +32,12 @@
         "codecommit:GetBranch",
         "codecommit:GetCommit",
         "codecommit:GetRepository",
-        "codecommit:ListBranches"
+        "codecommit:ListBranches",
+        "codecommit:GitPull",
+        "codecommit:UploadArchive",
+        "codecommit:GetUploadArchiveStatus",
+        "codecommit:CancelUploadArchive"
+
       ],
       "Effect": "Allow",
       "Resource": "*"
