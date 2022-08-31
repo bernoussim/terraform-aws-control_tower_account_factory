@@ -247,7 +247,7 @@ variable "account_provisioning_customizations_repo_branch" {
 variable "aft_s3_bucket_name" {
   description = "Bucket to store AFT repos in the engineering environment"
   type        = string
-  default     = "rbc-aws-aft"
+  default     = "aws-aft"
   validation {
     condition     = length(var.aft_s3_bucket_name) > 0
     error_message = "Variable var: aft_bucket_name cannot be empty."
