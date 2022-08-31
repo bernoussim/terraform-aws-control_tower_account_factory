@@ -78,7 +78,7 @@
       ],
       "Resource": [
         "arn:${data_aws_partition_current_partition}:codecommit:${data_aws_region_current_name}:${data_aws_caller_identity_current_account_id}:*customizations*",
-        "arn:aws:codecommit:us-east-2:756773456732:terraform-aws-control_tower_account_factory"
+        "arn:${data_aws_partition_current_partition}:codecommit:${data_aws_region_current_name}:${data_aws_caller_identity_current_account_id}:terraform-aws-control_tower_account_factory"
       ]
     },
     {
