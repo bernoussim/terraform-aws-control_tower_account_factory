@@ -35,7 +35,7 @@ variable "audit_account_id" {
 
 variable "aft_framework_repo_url" {
   description = "Git repo URL where the AFT framework should be sourced from"
-  default     = "https://github.com/bernoussim/terraform-aws-control_tower_account_factory.git"
+  default     = "codecommit::us-east-2://terraform-aws-control_tower_account_factory"
   type        = string
   validation {
     condition     = length(var.aft_framework_repo_url) > 0
